@@ -1,0 +1,5 @@
+Gilgamesh
+###BREAK###
+A puppet-animation based on the Sumerian Epic of Gilgamesh. Gilgamesh is King of the World, the greatest hero ever born, and chosen favourite of the Goddess Aruru; but he incautiously boasts that he can beat anyone in a fight, even Aruru herself. When she hears of this, Aruru sends a new hero to challenge him - Enkidu - but Enkidu and Gilgamesh become friends. Still determined to teach Gilgamesh a lesson, Aruru comes to earth in the form of a monster, and kills Enkidu. Gilgamesh is distraught at the death of his friend, and travels to the end of the world in an attempt to win him back. Made entirely with open-source software, except for a short picture-animation at the end which uses Flash MX.
+###BREAK###
+Animation, Comedy, Family, 
