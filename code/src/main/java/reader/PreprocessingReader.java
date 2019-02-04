@@ -46,7 +46,9 @@ public class PreprocessingReader extends JCasResourceCollectionReader_ImplBase {
         jCas.setDocumentText(data.plot);
         Title title = new Title(jCas);
         title.setBegin(0);
-        title.setEnd(data.plot.length() - 1);
+        title.setEnd(data.plot.length());
+        title.setTitle(data.title);
+        title.addToIndexes();
     }
 
     private Data readData(BufferedReader reader) throws IOException {
