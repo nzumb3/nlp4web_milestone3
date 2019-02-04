@@ -94,8 +94,8 @@ def insert(data, movieId, plot, isError=False):
 if __name__ == "__main__":
     print("#########START##########")
     startTime = time.time()
-    toCrawl = getToCrawl(len(API_KEYS)*3000)
-    p = Pool(8)
+    toCrawl = getToCrawl(len(API_KEYS)*2000)
+    p = Pool(16)
     result = p.map(crawl, toCrawl)
     tmp = time.time() - startTime
     tmp = np.round(tmp/60, 3)
