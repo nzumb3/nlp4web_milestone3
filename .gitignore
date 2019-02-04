@@ -1,2 +1,10 @@
 *.tsv
 *.csv
+.idea/
+*.iml
+*.iws
+log/
+target/
+.classpath
+.project
+.settings/
