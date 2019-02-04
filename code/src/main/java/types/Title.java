@@ -1,6 +1,6 @@
 
 
-/* First created by JCasGen Mon Feb 04 15:18:15 CET 2019 */
+/* First created by JCasGen Mon Feb 04 15:41:09 CET 2019 */
 package types;
 
 import org.apache.uima.jcas.JCas; 
@@ -11,8 +11,8 @@ import org.apache.uima.jcas.tcas.Annotation;
 
 
 /** 
- * Updated by JCasGen Mon Feb 04 15:18:15 CET 2019
- * XML source: /home/bene/Documents/Git_Repositories/nlp4web-ml-project/src/main/resources/desc/type/Title.xml
+ * Updated by JCasGen Mon Feb 04 15:41:09 CET 2019
+ * XML source: /home/bene/Documents/Git_Repositories/nlp4web_milestone3/code/src/main/resources/desc.type/Title.xml
  * @generated */
 public class Title extends Annotation {
   /** @generated
@@ -74,6 +74,28 @@ public class Title extends Annotation {
    */
   private void readObject() {/*default - does nothing empty block */}
      
-}
+ 
+    
+  //*--------------*
+  //* Feature: title
+
+  /** getter for title - gets 
+   * @generated
+   * @return value of the feature 
+   */
+  public String getTitle() {
+    if (Title_Type.featOkTst && ((Title_Type)jcasType).casFeat_title == null)
+      jcasType.jcas.throwFeatMissing("title", "types.Title");
+    return jcasType.ll_cas.ll_getStringValue(addr, ((Title_Type)jcasType).casFeatCode_title);}
+    
+  /** setter for title - sets  
+   * @generated
+   * @param v value to set into the feature 
+   */
+  public void setTitle(String v) {
+    if (Title_Type.featOkTst && ((Title_Type)jcasType).casFeat_title == null)
+      jcasType.jcas.throwFeatMissing("title", "types.Title");
+    jcasType.ll_cas.ll_setStringValue(addr, ((Title_Type)jcasType).casFeatCode_title, v);}    
+  }
 
     

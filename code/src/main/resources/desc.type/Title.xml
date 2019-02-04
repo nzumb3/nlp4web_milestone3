@@ -9,6 +9,13 @@
             <name>types.Title</name>
             <description/>
             <supertypeName>uima.tcas.Annotation</supertypeName>
-        </typeDescription>
+	        <features>
+		        <featureDescription>
+		          <name>title</name>
+		          <description/>
+		          <rangeTypeName>uima.cas.String</rangeTypeName>
+		        </featureDescription>
+	        </features>
+      	</typeDescription>
     </types>
 </typeSystemDescription>
