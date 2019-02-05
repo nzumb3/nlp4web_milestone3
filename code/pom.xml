@@ -29,7 +29,11 @@
         </dependency>
         <dependency>
             <groupId>org.dkpro.tc</groupId>
-            <artifactId>dkpro-tc-core</artifactId>
+            <artifactId>dkpro-tc-features</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>de.tudarmstadt.ukp.dkpro.core</groupId>
+            <artifactId>de.tudarmstadt.ukp.dkpro.core.snowball-asl</artifactId>
         </dependency>
         <dependency>
             <groupId>org.dkpro.tc</groupId>
@@ -43,6 +47,17 @@
             <groupId>de.tudarmstadt.ukp.dkpro.core</groupId>
             <artifactId>de.tudarmstadt.ukp.dkpro.core.stanfordnlp-gpl</artifactId>
             <version>1.8.0</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.json</groupId>
+            <artifactId>javax.json-api</artifactId>
+            <version>1.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.glassfish</groupId>
+            <artifactId>javax.json</artifactId>
+            <version>1.1</version>
         </dependency>
 
     </dependencies>

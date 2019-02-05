@@ -1,11 +1,12 @@
 import de.tudarmstadt.ukp.dkpro.core.ngrams.NGramAnnotator;
+import de.tudarmstadt.ukp.dkpro.core.snowball.SnowballStemmer;
 import de.tudarmstadt.ukp.dkpro.core.stanfordnlp.*;
 import org.apache.uima.UIMAException;
 import org.apache.uima.analysis_engine.AnalysisEngine;
 import org.apache.uima.collection.CollectionReader;
 import org.apache.uima.fit.pipeline.SimplePipeline;
 import reader.PreprocessingReader;
-import writer.DummyWriter;
+import writer.PreprocessedDataWriter;
 
 import java.io.IOException;
 
@@ -19,12 +20,13 @@ public class PreprocessingPipeline {
         AnalysisEngine segmenter = createEngine(StanfordSegmenter.class);
         AnalysisEngine posTagger = createEngine(StanfordPosTagger.class);
         AnalysisEngine lemmatizer = createEngine(StanfordLemmatizer.class);
-        AnalysisEngine parser = createEngine(StanfordParser.class);
+        //AnalysisEngine parser = createEngine(StanfordParser.class);
         AnalysisEngine namedEntityRecognizer = createEngine(StanfordNamedEntityRecognizer.class);
+        AnalysisEngine stemmer = createEngine(SnowballStemmer.class);
         AnalysisEngine nGramAnnotator = createEngine(NGramAnnotator.class);
 
-        AnalysisEngine writer = createEngine(DummyWriter.class);
+        AnalysisEngine writer = createEngine(PreprocessedDataWriter.class, PreprocessedDataWriter.PARAM_TARGET_LOCATION, "src/main/resources/preprocessed/", PreprocessedDataWriter.PARAM_STRIP_EXTENSION, true);
 
-        SimplePipeline.runPipeline(reader, writer);
+        SimplePipeline.runPipeline(reader, segmenter, posTagger, lemmatizer, namedEntityRecognizer, stemmer, nGramAnnotator, writer);
     }
 }
